@@ -19,10 +19,15 @@ class StateClass extends Component {
     console.log('Component This:', this)
     this.toggleDisplayBio = this.toggleDisplayBio.bind(this)
     this.updateSetState = this.updateSetState.bind(this)
+    this.forceUpdateEvent = this.forceUpdateEvent.bind(this)
   }
 
   updateSetState () {
     this.setState({ name: 'Shabin' })
+  }
+
+  forceUpdateEvent () {
+    this.forceUpdate()
   }
 
   // arrowFun = () => {
@@ -60,8 +65,12 @@ class StateClass extends Component {
         {bio}
         <input type='text' defaultValue={this.state.cons} />
         <button onClick={this.handleEvent}>constructor button</button>
+        <br />
         <input type='text' value={this.state.name} />
         <button onClick={this.updateSetState}>update SetState</button>
+        <br />
+        <p>Random Number: {Math.random()}</p>
+        <button onClick={this.forceUpdateEvent}>Get Random</button>
       </div>
     )
   }
