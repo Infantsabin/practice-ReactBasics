@@ -12,10 +12,20 @@ class StateClass extends Component {
     this.state = {
       data: [{ name: 'Sabin' }, { name: 'Abi' }, { name: 'Zavith' }],
       displayBio: false,
-      name: 'Sabin'
+      name: 'Sabin',
+      cons: 'www.google.com'
     }
+    this.handleEvent = this.handleEvent.bind(this)
     console.log('Component This:', this)
     this.toggleDisplayBio = this.toggleDisplayBio.bind(this)
+  }
+
+  // arrowFun = () => {
+  //   console.log(this.props)
+  // }
+
+  handleEvent () {
+    console.log(this.props)
   }
 
   toggleDisplayBio () {
@@ -38,11 +48,13 @@ class StateClass extends Component {
       <div>
         <Name nameProp={this.state.name} />
         <ul>
-          {this.state.data.map((item) =>
-            <List data={item} />
+          {this.state.data.map((item, key) =>
+            <List data={item} key={key} />
           )}
         </ul>
         {bio}
+        <input type='text' defaultValue={this.state.cons} />
+        <button onClick={this.handleEvent}>constructor button</button>
       </div>
     )
   }
