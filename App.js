@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ExtraClass from './ExtraClass.js'
 import StateClass from './StateClass.js'
+import ReactComponent from './ReactComponent.js'
 
 class App extends Component {
   render () {
@@ -20,6 +21,8 @@ class App extends Component {
         <Welcome name='Function Component' />
         <ExtraClass />
         <StateClass />
+        <p style={myStyle}>React Component API</p>
+        <ReactComponent />
         <h1 style={myStyle}>ReactJS Props validation</h1>
         <table>
           <tr>
@@ -53,6 +56,7 @@ class App extends Component {
             <td>{this.props.propNumber ? 'true' : 'False'}</td>
           </tr>
         </table>
+        
       </div>
     )
   }
