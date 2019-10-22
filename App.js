@@ -4,6 +4,7 @@ import ExtraClass from './ExtraClass.js'
 import StateClass from './StateClass.js'
 import ReactComponent from './ReactComponent.js'
 import LifeCycle from './LifeCycle.js'
+import ReactForm from './ReactForm.js'
 
 class App extends Component {
   render () {
@@ -58,6 +59,7 @@ class App extends Component {
           </tr>
         </table>
         <LifeCycle />
+        <ReactForm />
       </div>
     )
   }
