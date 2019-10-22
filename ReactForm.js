@@ -12,9 +12,32 @@ class ReactForm extends Component {
     super(props)
     this.formSubmit = this.formSubmit.bind(this)
     this.input = React.createRef()
-    this.state = { value: '' }
+    this.state = {
+      value: '',
+      personGoing: false,
+      numberOfPerson: 5
+    }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleMultipleInputChange = this.handleMultipleInputChange.bind(this)
+  }
+
+  handleMultipleInputChange (event) {
+    var target = event.target
+    var value = target.type === 'checkbox' ? target.checked : target.value
+    var name = target.name
+    this.setState({
+      [name]: value
+    })
+    console.log([name])
+  }
+
+  componentWillUpdate (newProps, newState) {
+    console.log('Component Will update', newProps, newState)
+  }
+
+  componentDidUpdate (prevProps, prevState) {
+    console.log('Component Did update', prevProps, prevState)
   }
 
   handleChange (event) {
@@ -52,6 +75,14 @@ class ReactForm extends Component {
           <input type='text' value={this.state.value} onChange={this.handleChange} />
           <br />
           <input type='submit' value='submit' />
+        </form>
+        <form>
+          <h1 style={myStyle}>Controlled React Form with multiple</h1>
+          <label>Is person going </label>
+          <input type='checkbox' name='personGoing' checked={this.state.personGoing} onChange={this.handleMultipleInputChange} />
+          <br />
+          <label>Number of persons </label>
+          <input type='number' value={this.state.numberOfPerson} onChange={this.handleMultipleInputChange} />
         </form>
       </div>
     )
