@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import ExtraClass from './ExtraClass.js'
 import StateClass from './StateClass.js'
 import ReactComponent from './ReactComponent.js'
+import LifeCycle from './LifeCycle.js'
 
 class App extends Component {
   render () {
@@ -56,7 +57,7 @@ class App extends Component {
             <td>{this.props.propNumber ? 'true' : 'False'}</td>
           </tr>
         </table>
-        
+        <LifeCycle />
       </div>
     )
   }

@@ -12,7 +12,7 @@ class ReactComponent extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      name: 'Shabin'
+      fName: 'Sabin'
     }
     this.setStateEvent = this.setStateEvent.bind(this)
     this.forceUpdateEvent = this.forceUpdateEvent.bind(this)
@@ -21,7 +21,7 @@ class ReactComponent extends Component {
   }
 
   setStateEvent () {
-    this.setState({ name: 'Sabin' })
+    this.setState({ fName: 'Shabin' })
   }
 
   forceUpdateEvent () {
@@ -41,7 +41,7 @@ class ReactComponent extends Component {
   render () {
     return (
       <div>
-        <input type='text' defaultValue={this.state.name} />
+        <input type='text' value={this.state.fName} />
         <button onClick={this.setStateEvent}>SetState Component</button>
         <br />
         <p>Random Number: {Math.random()}</p>

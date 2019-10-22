@@ -66,7 +66,7 @@ class StateClass extends Component {
         <input type='text' defaultValue={this.state.cons} />
         <button onClick={this.handleEvent}>constructor button</button>
         <br />
-        <input type='text' defaultValue={this.state.name} />
+        <input type='text' value={this.state.name} />
         <button onClick={this.updateSetState}>update SetState</button>
         <br />
         <p>Random Number: {Math.random()}</p>
