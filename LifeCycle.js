@@ -41,7 +41,7 @@ class LifeCycle extends Component {
   }
 
   componentDidUpdate (prevProps, prevState) {
-    console.log('Component Did update', prevProps, prevProps)
+    console.log('Component Did update', prevProps, prevState)
   }
 
   componentWillUnmount () {
