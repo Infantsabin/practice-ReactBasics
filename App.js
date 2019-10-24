@@ -6,6 +6,7 @@ import ReactComponent from './ReactComponent.js'
 import LifeCycle from './LifeCycle.js'
 import ReactForm from './ReactForm.js'
 import ReactEvent from './ReactEvent.js'
+import ConditionalRendering from './ConditionalRendering.js'
 
 class App extends Component {
   render () {
@@ -62,6 +63,7 @@ class App extends Component {
         <LifeCycle />
         <ReactForm />
         <ReactEvent />
+        <ConditionalRendering />
       </div>
     )
   }
