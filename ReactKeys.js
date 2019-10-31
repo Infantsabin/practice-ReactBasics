@@ -10,8 +10,8 @@ var myStyle = {
 
 function NameList (props) {
   const myList = (props.list)
-  const nameList = myList.map((strList) =>
-    <ListItem key={myList.toString()} item={strList} />
+  const nameList = myList.map((strList, key) =>
+    <ListItem key={key} item={strList} />
   )
   return (
     <div>

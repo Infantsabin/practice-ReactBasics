@@ -8,6 +8,7 @@ import ReactForm from './ReactForm.js'
 import ReactEvent from './ReactEvent.js'
 import ConditionalRendering from './ConditionalRendering.js'
 import ReactKeys from './ReactKeys.js'
+import ReactRef from './ReactRef.js'
 
 class App extends Component {
   render () {
@@ -66,6 +67,7 @@ class App extends Component {
         <ReactEvent />
         <ConditionalRendering />
         <ReactKeys />
+        <ReactRef />
       </div>
     )
   }
