@@ -46,8 +46,6 @@ class StateClass extends Component {
   render () {
     const bio = this.state.displayBio ? (
       <div>
-        <NavLink style={myStyle} to='/'>Back</NavLink>
-        <br />
         <h5 style={myStyle}>Show Less</h5>
         <button style={myStyle} onClick={this.toggleDisplayBio}> Show Less </button>
       </div>
@@ -59,6 +57,8 @@ class StateClass extends Component {
     )
     return (
       <div>
+        <NavLink style={myStyle} to='/'>Back</NavLink>
+        <br />
         <Name nameProp={this.state.name} />
         <ul>
           {this.state.data.map((item, key) =>

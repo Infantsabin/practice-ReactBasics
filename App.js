@@ -6,7 +6,7 @@ class App extends Component {
     var myStyle = {
       fontSize: 40,
       fontFamily: 'Courier',
-      color: '#003300',
+      // color: '#003300',
       textAlign: 'center'
     }
     function Welcome (props) {
@@ -23,23 +23,32 @@ class App extends Component {
           { color: 'red' }
         }>Link</Link>
         <br />
-        <NavLink style={myStyle} to='/extra-class'>Extra Class</NavLink>
+        <NavLink style={myStyle} activeStyle={
+          { color: 'magenta' } }to='/extra-class'>Extra Class</NavLink>
         <br />
-        <NavLink style={myStyle} to='/state-class'>State Class</NavLink>
+        <NavLink style={myStyle} activeStyle={
+          { color: 'magenta' } }to='/state-class'>State Class</NavLink>
         <br />
-        <NavLink style={myStyle} to='/react-component'>React Component</NavLink>
+        <NavLink style={myStyle} activeStyle={
+          { color: 'magenta' } }to='/react-component'>React Component</NavLink>
         <br />
-        <NavLink style={myStyle} to='/react-life'>React Life</NavLink>
+        <NavLink style={myStyle} activeStyle={
+          { color: 'magenta' } }to='/react-life-cycle'>React LifeCycle</NavLink>
         <br />
-        <NavLink style={myStyle} to='/react-form'>React Form</NavLink>
+        <NavLink style={myStyle} activeStyle={
+          { color: 'magenta' } }to='/react-form'>React Form</NavLink>
         <br />
-        <NavLink style={myStyle} to='/react-event'>React Event</NavLink>
+        <NavLink style={myStyle} activeStyle={
+          { color: 'magenta' } }to='/react-event'>React Event</NavLink>
         <br />
-        <NavLink style={myStyle} to='/react-conditional-rendering'>React Conditional Rendering</NavLink>
+        <NavLink style={myStyle} activeStyle={
+          { color: 'magenta' } }to='/react-conditional-rendering'>React Conditional Rendering</NavLink>
         <br />
-        <NavLink style={myStyle} to='/react-key'>React Key</NavLink>
+        <NavLink style={myStyle} activeStyle={
+          { color: 'magenta' } }to='/react-key'>React Key</NavLink>
         <br />
-        <NavLink style={myStyle} to='/react-ref'>React Ref</NavLink>
+        <NavLink style={myStyle} activeStyle={
+          { color: 'magenta' } }to='/react-ref'>React Ref</NavLink>
         <br />
         <h1 style={myStyle}>Hello {this.props.name}!</h1>
         <Welcome name='Function Component' />
