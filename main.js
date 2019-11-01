@@ -11,6 +11,7 @@ import ReactEvent from './ReactEvent.js'
 import ConditionalRendering from './ConditionalRendering.js'
 import ReactKeys from './ReactKeys.js'
 import ReactRef from './ReactRef.js'
+import Contact from './Contact.js'
 function NotFound () {
   return (
     <h1>Not found</h1>
@@ -30,6 +31,7 @@ const routing = (
         <Route path='/react-conditional-rendering' component={ConditionalRendering} />
         <Route path='/react-key' component={ReactKeys} />
         <Route path='/react-ref' component={ReactRef} />
+        <Route path='/contact' component={Contact} />
         <Route component={NotFound} />
       </Switch>
     </>
