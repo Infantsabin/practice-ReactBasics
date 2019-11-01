@@ -22,6 +22,8 @@ class ReactEvent extends Component {
   render () {
     return (
       <div>
+        <a style={myStyle} href='/'>Back</a>
+        <br />
         <h1 style={myStyle}>React Event</h1>
         <label>Input</label>
         <input type='text' id='text' onChange={this.handleEvent.bind(this)} />

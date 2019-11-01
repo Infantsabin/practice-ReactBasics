@@ -1,19 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import ExtraClass from './ExtraClass.js'
-import StateClass from './StateClass.js'
-import ReactComponent from './ReactComponent.js'
-import LifeCycle from './LifeCycle.js'
-import ReactForm from './ReactForm.js'
-import ReactEvent from './ReactEvent.js'
-import ConditionalRendering from './ConditionalRendering.js'
-import ReactKeys from './ReactKeys.js'
-import ReactRef from './ReactRef.js'
-
 class App extends Component {
   render () {
     var myStyle = {
-      fontSize: 80,
+      fontSize: 40,
       fontFamily: 'Courier',
       color: '#003300',
       textAlign: 'center'
@@ -23,12 +13,28 @@ class App extends Component {
     }
     return (
       <div>
+        <h3 style={myStyle}>React Router</h3>
+        <a style={myStyle} href='/extra-class'>Extra Class</a>
+        <br />
+        <a style={myStyle} href='/state-class'>State Class</a>
+        <br />
+        <a style={myStyle} href='/react-component'>React Component</a>
+        <br />
+        <a style={myStyle} href='/react-life'>React Life</a>
+        <br />
+        <a style={myStyle} href='/react-form'>React Form</a>
+        <br />
+        <a style={myStyle} href='/react-event'>React Event</a>
+        <br />
+        <a style={myStyle} href='/react-conditional-rendering'>React Conditional Rendering</a>
+        <br />
+        <a style={myStyle} href='/react-key'>React Key</a>
+        <br />
+        <a style={myStyle} href='/react-ref'>React Ref</a>
+        <br />
         <h1 style={myStyle}>Hello {this.props.name}!</h1>
         <Welcome name='Function Component' />
-        <ExtraClass />
-        <StateClass />
         <p style={myStyle}>React Component API</p>
-        <ReactComponent />
         <h1 style={myStyle}>ReactJS Props validation</h1>
         <table>
           <tr>
@@ -62,12 +68,6 @@ class App extends Component {
             <td>{this.props.propNumber ? 'true' : 'False'}</td>
           </tr>
         </table>
-        <LifeCycle />
-        <ReactForm />
-        <ReactEvent />
-        <ConditionalRendering />
-        <ReactKeys />
-        <ReactRef />
       </div>
     )
   }

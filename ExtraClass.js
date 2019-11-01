@@ -19,6 +19,8 @@ class First extends Component {
   render () {
     return (
       <div>
+        <a style={myStyle} href='/'>Back</a>
+        <br />
         <h4 style={myStyle}>Class First Component </h4>
       </div>
     )

@@ -43,6 +43,8 @@ class ConditionalRendering extends Component {
   render () {
     return (
       <div>
+        <a style={myStyle} href='/'>Back</a>
+        <br />
         <h1 style={myStyle}>Conditional Rendering</h1>
         <Message isLoggedIn={this.state.isLoggedIn} />
         {

@@ -45,6 +45,8 @@ class StateClass extends Component {
   render () {
     const bio = this.state.displayBio ? (
       <div>
+        <a style={myStyle} href='/'>Back</a>
+        <br />
         <h5 style={myStyle}>Show Less</h5>
         <button style={myStyle} onClick={this.toggleDisplayBio}> Show Less </button>
       </div>

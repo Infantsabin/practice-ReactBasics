@@ -15,6 +15,8 @@ function NameList (props) {
   )
   return (
     <div>
+      <a style={myStyle} href='/'>Back</a>
+      <br />
       <h3 style={myStyle}>Corrected key Values</h3>
       <ol>{nameList}</ol>
     </div>

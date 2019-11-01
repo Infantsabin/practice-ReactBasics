@@ -51,6 +51,8 @@ class LifeCycle extends Component {
   render () {
     return (
       <div>
+        <a style={myStyle} href='/'>Back</a>
+        <br />
         <h3 style={myStyle}>React LifeCycle</h3>
         <h2>{this.state.name}</h2>
         <button onClick={this.changeState}>Click Here</button>

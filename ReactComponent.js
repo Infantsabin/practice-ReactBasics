@@ -41,6 +41,8 @@ class ReactComponent extends Component {
   render () {
     return (
       <div>
+        <a style={myStyle} href='/'>Back</a>
+        <br />
         <input type='text' value={this.state.fName} />
         <button onClick={this.setStateEvent}>SetState Component</button>
         <br />

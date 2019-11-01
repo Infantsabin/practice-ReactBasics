@@ -59,6 +59,8 @@ class ReactForm extends Component {
   render () {
     return (
       <div>
+        <a style={myStyle} href='/'>Back</a>
+        <br />
         <form onSubmit={this.formSubmit}>
           <h1 style={myStyle}>Uncontrolled React Form</h1>
           <label>Employee Name : </label>
