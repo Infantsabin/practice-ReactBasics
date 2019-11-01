@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
+
 var myStyle = {
   fontSize: 80,
   fontFamily: 'Courier',
@@ -33,7 +35,7 @@ class ReactRef extends Component {
   render () {
     return (
       <div>
-        <a style={myStyle} href='/'>Back</a>
+        <NavLink style={myStyle} to='/'>Back</NavLink>
         <br />
         <h3 style={myStyle}>React Ref to DOM element</h3>
         <input type='text' ref={this.callRef} />

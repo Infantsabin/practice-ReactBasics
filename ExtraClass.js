@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
+
 var myStyle = {
   fontSize: 80,
   fontFamily: 'Courier',
@@ -19,7 +21,7 @@ class First extends Component {
   render () {
     return (
       <div>
-        <a style={myStyle} href='/'>Back</a>
+        <NavLink style={myStyle} to='/'>Back</NavLink>
         <br />
         <h4 style={myStyle}>Class First Component </h4>
       </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
+import { NavLink } from 'react-router-dom'
 
 var myStyle = {
   fontSize: 80,
@@ -41,7 +42,7 @@ class ReactComponent extends Component {
   render () {
     return (
       <div>
-        <a style={myStyle} href='/'>Back</a>
+        <NavLink style={myStyle} to='/'>Back</NavLink>
         <br />
         <input type='text' value={this.state.fName} />
         <button onClick={this.setStateEvent}>SetState Component</button>

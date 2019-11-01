@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
+
 var myStyle = {
   fontSize: 80,
   fontFamily: 'Courier',
@@ -43,7 +45,7 @@ class ConditionalRendering extends Component {
   render () {
     return (
       <div>
-        <a style={myStyle} href='/'>Back</a>
+        <NavLink style={myStyle} to='/'>Back</NavLink>
         <br />
         <h1 style={myStyle}>Conditional Rendering</h1>
         <Message isLoggedIn={this.state.isLoggedIn} />

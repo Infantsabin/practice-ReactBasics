@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 
 var myStyle = {
   fontSize: 80,
@@ -51,7 +52,7 @@ class LifeCycle extends Component {
   render () {
     return (
       <div>
-        <a style={myStyle} href='/'>Back</a>
+        <NavLink style={myStyle} to='/'>Back</NavLink>
         <br />
         <h3 style={myStyle}>React LifeCycle</h3>
         <h2>{this.state.name}</h2>

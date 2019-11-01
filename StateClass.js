@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 
 var myStyle = {
   fontSize: 80,
@@ -45,7 +46,7 @@ class StateClass extends Component {
   render () {
     const bio = this.state.displayBio ? (
       <div>
-        <a style={myStyle} href='/'>Back</a>
+        <NavLink style={myStyle} to='/'>Back</NavLink>
         <br />
         <h5 style={myStyle}>Show Less</h5>
         <button style={myStyle} onClick={this.toggleDisplayBio}> Show Less </button>

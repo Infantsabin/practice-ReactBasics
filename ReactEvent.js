@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 
 var myStyle = {
   fontSize: 80,
@@ -22,7 +23,7 @@ class ReactEvent extends Component {
   render () {
     return (
       <div>
-        <a style={myStyle} href='/'>Back</a>
+        <NavLink style={myStyle} to='/'>Back</NavLink>
         <br />
         <h1 style={myStyle}>React Event</h1>
         <label>Input</label>

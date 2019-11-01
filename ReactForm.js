@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 
 var myStyle = {
   fontSize: 80,
@@ -59,7 +60,7 @@ class ReactForm extends Component {
   render () {
     return (
       <div>
-        <a style={myStyle} href='/'>Back</a>
+        <NavLink style={myStyle} to='/'>Back</NavLink>
         <br />
         <form onSubmit={this.formSubmit}>
           <h1 style={myStyle}>Uncontrolled React Form</h1>

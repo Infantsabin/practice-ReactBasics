@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
+
 const mylists = ['Peter', 'Sachin', 'Kevin']
 
 var myStyle = {
@@ -15,7 +17,7 @@ function NameList (props) {
   )
   return (
     <div>
-      <a style={myStyle} href='/'>Back</a>
+      <NavLink style={myStyle} to='/'>Back</NavLink>
       <br />
       <h3 style={myStyle}>Corrected key Values</h3>
       <ol>{nameList}</ol>
