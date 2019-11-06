@@ -7,6 +7,7 @@ class App extends Component {
       fontSize: 40,
       fontFamily: 'Courier',
       // color: '#003300',
+      // backgroundColor: '#008080',
       textAlign: 'center'
     }
     function Welcome (props) {
@@ -52,6 +53,9 @@ class App extends Component {
         <br />
         <NavLink style={myStyle} activestyle={
           { color: 'magenta' }} to='/contact'>Contact</NavLink>
+        <br />
+        <NavLink style={myStyle} activestyle={
+          { color: 'magenta' }} to='/react-table'>React Table</NavLink>
         <br />
         <h1 style={myStyle}>Hello {this.props.name}!</h1>
         <Welcome name='Function Component' />
