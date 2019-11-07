@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { NavLink, Link } from 'react-router-dom'
+import HigherOrderComponent from './HigherOrderComponent'
 class App extends Component {
   render () {
     var myStyle = {
@@ -117,5 +118,7 @@ App.defaultProps = {
   propString: 'JavaTpoint'
 
 }
+
+App = HigherOrderComponent(App)
 
 export default App
