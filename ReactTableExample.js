@@ -33,7 +33,7 @@ class ReactTableExample extends Component {
       accessor: 'age'
     }]
     return (
-      <>
+      <React.Fragment>
         <NavLink to='/'>Back</NavLink>
         <h1>Hello</h1>
         <ReactTable
@@ -42,7 +42,7 @@ class ReactTableExample extends Component {
           defaultPageSize={3}
           pageSizeOptions={[2, 4, 6]}
         />
-      </>
+      </React.Fragment>
     )
   }
 }

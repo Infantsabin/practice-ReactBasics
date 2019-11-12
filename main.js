@@ -21,23 +21,21 @@ function NotFound () {
 }
 const routing = (
   <Router>
-    <>
-      <Switch>
-        <Route path='/' exact component={App} />
-        <Route path='/extra-class' component={ExtraClass} />
-        <Route path='/state-class' component={StateClass} />
-        <Route path='/react-component' component={ReactComponent} />
-        <Route path='/react-life-cycle' component={LifeCycle} />
-        <Route path='/react-form' component={ReactForm} />
-        <Route path='/react-event' component={ReactEvent} />
-        <Route path='/react-conditional-rendering' component={ConditionalRendering} />
-        <Route path='/react-key' component={ReactKeys} />
-        <Route path='/react-ref' component={ReactRef} />
-        <Route path='/contact' component={Contact} />
-        <Route path='/react-table' component={ReactTableExample} />
-        <Route component={NotFound} />
-      </Switch>
-    </>
+    <Switch>
+      <Route path='/' exact component={App} />
+      <Route path='/extra-class' component={ExtraClass} />
+      <Route path='/state-class' component={StateClass} />
+      <Route path='/react-component' component={ReactComponent} />
+      <Route path='/react-life-cycle' component={LifeCycle} />
+      <Route path='/react-form' component={ReactForm} />
+      <Route path='/react-event' component={ReactEvent} />
+      <Route path='/react-conditional-rendering' component={ConditionalRendering} />
+      <Route path='/react-key' component={ReactKeys} />
+      <Route path='/react-ref' component={ReactRef} />
+      <Route path='/contact' component={Contact} />
+      <Route path='/react-table' component={ReactTableExample} />
+      <Route component={NotFound} />
+    </Switch>
   </Router>
 )
 ReactDOM.render(routing, document.getElementById('app'))

@@ -6,7 +6,7 @@ class Contact extends Component {
   render () {
     const { url } = this.props.match
     return (
-      <>
+      <React.Fragment>
         <NavLink to='/'>Back</NavLink>
         <h3>Contact ID Picker</h3>
         <Link to='/contact/1'>Contact 1</Link>
@@ -18,7 +18,7 @@ class Contact extends Component {
         <Link to='/contact/4'>Contact 4</Link>
         <br />
         <Route path='/contact/:id' component={Contacts} />
-      </>
+      </React.Fragment>
     )
   }
 }

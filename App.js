@@ -2,7 +2,19 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { NavLink, Link } from 'react-router-dom'
 import HigherOrderComponent from './HigherOrderComponent'
-class App extends Component {
+import ReactContext from './ReactContext'
+
+// const ReactLazyImport = React.lazy(() => import('./ReactLazy'))
+
+// function ReactLazy() {
+//   return (
+//     <React.Fragment>
+//     <ReactLazyImport />
+//     </React.Fragment>
+//   )
+// }
+
+class AppHoc extends Component {
   render () {
     var myStyle = {
       fontSize: 40,
@@ -16,6 +28,7 @@ class App extends Component {
     }
     return (
       <div>
+        <ReactContext />
         <h3 style={myStyle}>React Router</h3>
         <NavLink style={myStyle} to='/extra-class' exact activestyle={
           { color: 'red' }
@@ -101,7 +114,7 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
+AppHoc.propTypes = {
   propArray: PropTypes.array.isRequired,
   propBool: PropTypes.bool.isRequired,
   propFunc: PropTypes.func,
@@ -109,7 +122,7 @@ App.propTypes = {
   propString: PropTypes.string
 }
 
-App.defaultProps = {
+AppHoc.defaultProps = {
   name: 'Infant',
   propArray: [1, 2, 3, 4, 5],
   propBool: true,
@@ -119,6 +132,6 @@ App.defaultProps = {
 
 }
 
-App = HigherOrderComponent(App)
+const App = HigherOrderComponent(AppHoc)
 
 export default App
