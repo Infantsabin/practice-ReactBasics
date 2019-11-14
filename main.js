@@ -13,6 +13,7 @@ import ReactKeys from './ReactKeys.js'
 import ReactRef from './ReactRef.js'
 import Contact from './Contact.js'
 import ReactTableExample from './ReactTableExample.js'
+import ReactContext from './ReactContext.js'
 
 function NotFound () {
   return (
@@ -34,6 +35,7 @@ const routing = (
       <Route path='/react-ref' component={ReactRef} />
       <Route path='/contact' component={Contact} />
       <Route path='/react-table' component={ReactTableExample} />
+      <Route path='/react-context' component={ReactContext} />
       <Route component={NotFound} />
     </Switch>
   </Router>

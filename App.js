@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { NavLink, Link } from 'react-router-dom'
 import HigherOrderComponent from './HigherOrderComponent'
-import ReactContext from './ReactContext'
 
 // const ReactLazyImport = React.lazy(() => import('./ReactLazy'))
 
@@ -28,7 +27,6 @@ class AppHoc extends Component {
     }
     return (
       <div>
-        <ReactContext />
         <h3 style={myStyle}>React Router</h3>
         <NavLink style={myStyle} to='/extra-class' exact activestyle={
           { color: 'red' }
@@ -70,6 +68,9 @@ class AppHoc extends Component {
         <br />
         <NavLink style={myStyle} activestyle={
           { color: 'magenta' }} to='/react-table'>React Table</NavLink>
+        <br />
+        <NavLink style={myStyle} activestyle={
+          { color: 'magenta' }} to='/react-context'>React Context</NavLink>
         <br />
         <h1 style={myStyle}>Hello {this.props.name}!</h1>
         <Welcome name='Function Component' />
