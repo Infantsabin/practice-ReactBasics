@@ -1,43 +1,42 @@
 import React, { Component } from 'react'
-const ThemeContext = React.createContext('light')
+import { ThemeContext, themes } from './Context/theme-context'
+import ThemedButton from './Context/themed-button'
 
-class ReactContext extends React.Component {
+class ReactContext extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      theme: themes.light
+    }
+    this.toggleTheme = () => {
+      this.setState(state => ({
+        theme:
+        state.theme === themes.dark ? themes.light : themes.dark
+      }))
+    }
+  }
+
   render () {
     return (
-      <ThemeContext.Provider value='dark'>
-        <Toolbar />
-      </ThemeContext.Provider>
+      <React.Fragment>
+        <ThemeContext.Provider value={this.state.theme}>
+          <Toolbar changeTheme={this.toggleTheme} />
+        </ThemeContext.Provider>
+        <section>
+          <ThemedButton>Another One</ThemedButton>
+        </section>
+      </React.Fragment>
+
     )
   }
 }
 
 function Toolbar (props) {
   return (
-    <React.Fragment>
-      <ThemeButton />
-    </React.Fragment>
+    // <React.Fragment>
+    <ThemedButton onClick={props.changeTheme} >Change Theme</ThemedButton>
+    // </React.Fragment>
   )
 }
-
-class ThemeButton extends React.Component {
-  render () {
-    return (
-      <button
-        style={
-          {
-            backgroundColor: this.context === 'dark' ? '#FFFFFF' : '#000000'
-          }
-        }
-        onClick={
-          e => {
-
-          }
-        }
-      >Button</button>
-    )
-  }
-}
-
-ThemeButton.contextType = ThemeContext
 
 export default ReactContext
