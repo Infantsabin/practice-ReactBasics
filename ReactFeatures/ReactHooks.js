@@ -1,8 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 
 function ReactHooks () {
   const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    document.title = `you clicked ${count} times`
+  })
+
   return (
     <div>
       <NavLink to='/'>Back</NavLink>
