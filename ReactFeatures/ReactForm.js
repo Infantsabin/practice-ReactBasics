@@ -12,7 +12,8 @@ class ReactForm extends Component {
   constructor (props) {
     super(props)
     this.formSubmit = this.formSubmit.bind(this)
-    this.input = React.createRef()
+    this.input1 = React.createRef()
+    this.input2 = React.createRef()
     this.state = {
       value: '',
       personGoing: false,
@@ -31,6 +32,10 @@ class ReactForm extends Component {
       [name]: value
     })
     console.log([name])
+  }
+
+  componentDidMount () {
+    this.input3.value = 'asdad'
   }
 
   componentWillUpdate (newProps, newState) {
@@ -52,12 +57,14 @@ class ReactForm extends Component {
   }
 
   formSubmit (e) {
+    console.log(this.input1.current.value, this.input2.current.value)
     alert('You updated your Name and Company name')
     console.log(e)
     e.preventDefault()
   }
 
   render () {
+    console.log(this.input3)
     return (
       <div>
         <NavLink style={myStyle} to='/'>Back</NavLink>
@@ -65,10 +72,13 @@ class ReactForm extends Component {
         <form onSubmit={this.formSubmit}>
           <h1 style={myStyle}>Uncontrolled React Form</h1>
           <label>Employee Name : </label>
-          <input type='text' ref={this.input} />
+          <input type='text' ref={this.input1} />
           <br />
           <label>Company Name : </label>
-          <input type='text' ref={this.input} />
+          <input type='text' ref={this.input2} />
+          <input type='text' ref={comp => {
+            this.input3 = comp
+          }} />
           <br />
           <input type='submit' value='submit' />
         </form>

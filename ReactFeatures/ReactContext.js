@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { ThemeContext, themes } from './Context/theme-context'
-import ThemedButton from './Context/themed-button'
-import { NavLink } from 'react-router-dom'
+import { ThemeContext, themes } from '../Context/theme-context'
+import ThemedButton from '../Context/themed-button'
+import { NavLink } from 'react-router-dom' 
 
 class ReactContext extends Component {
   constructor (props) {
