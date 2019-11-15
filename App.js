@@ -72,6 +72,9 @@ class AppHoc extends Component {
         <NavLink style={myStyle} activestyle={
           { color: 'magenta' }} to='/react-context'>React Context</NavLink>
         <br />
+        <NavLink style={myStyle} activestyle={
+          { color: 'magenta' }} to='/react-hooks'>React Hooks</NavLink>
+        <br />
         <h1 style={myStyle}>Hello {this.props.name}!</h1>
         <Welcome name='Function Component' />
         <p style={myStyle}>React Component API</p>

@@ -14,6 +14,7 @@ import ReactRef from './ReactFeatures/ReactRef.js'
 import Contact from './ReactFeatures/Contact.js'
 import ReactTableExample from './ReactFeatures/ReactTableExample.js'
 import ReactContext from './ReactFeatures/ReactContext.js'
+import ReactHooks from './ReactFeatures/ReactHooks.js'
 
 function NotFound () {
   return (
@@ -36,6 +37,7 @@ const routing = (
       <Route path='/contact' component={Contact} />
       <Route path='/react-table' component={ReactTableExample} />
       <Route path='/react-context' component={ReactContext} />
+      <Route path='/react-hooks' component={ReactHooks} />
       <Route component={NotFound} />
     </Switch>
   </Router>
